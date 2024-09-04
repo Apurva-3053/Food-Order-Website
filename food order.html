@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"  rel="stylesheet"/>
+    <title>Food Order Website</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Delicious Cafe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order-summary">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<section>
+    <!-- Background Image Section -->
+    <div class="bg-img" id="home">
+        <div class="content">
+            <h1>Welcome to Our Delicious Cafe</h1>
+            <a href="#menu" class="btn btn-primary">View Menu</a>
+        </div>
+    </div>
+  </section>
+  
+  <section id="menu">
+    <div class="container">
+      <h2 class="text-center">Our Menu</h2>
+      <p class="text-center">Choose from our wide selection of delicious dishes.</p>
+      <form id="food-order-form">
+        <div class="row">
+          <!-- Food Type Selection -->
+          <div class="col-md-6 mb-3">
+            <label for="food-type" class="form-label">Food Type 🍕</label>
+            <select class="form-control" id="food-type">
+              <option value="pizza" data-price="200">🍕 Pizza - ₹200</option>
+              <option value="burger" data-price="150">🍔 Burger - ₹150</option>
+              <option value="pasta" data-price="180">🍝 Pasta - ₹180</option>
+              <option value="salad" data-price="120">🥗 Salad - ₹120</option>
+              <option value="coffee" data-price="100">☕ Coffee - ₹100</option>
+            </select>
+          </div>
+  
+          <!-- Size Selection -->
+          <div class="col-md-6 mb-3">
+            <label for="size" class="form-label">Size 📏</label>
+            <select class="form-control" id="size">
+              <option value="small" data-price="0">Small</option>
+              <option value="medium" data-price="50">Medium - ₹50</option>
+              <option value="large" data-price="100">Large - ₹100</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="row">
+          <!-- Toppings Selection (for applicable food types) -->
+          <div class="col-md-12 mb-3">
+            <label for="toppings" class="form-label">Toppings 🍴 (Optional)</label>
+            <div id="toppings" class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="cheese" data-price="30" id="cheese">
+                <label class="form-check-label" for="cheese">🧀 Extra Cheese - ₹30</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="pepperoni" data-price="40" id="pepperoni">
+                <label class="form-check-label" for="pepperoni">🍖 Pepperoni - ₹40</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="mushrooms" data-price="25" id="mushrooms">
+                <label class="form-check-label" for="mushrooms">🍄 Mushrooms - ₹25</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="olives" data-price="20" id="olives">
+                <label class="form-check-label" for="olives">🫒 Olives - ₹20</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="bacon" data-price="35" id="bacon">
+                <label class="form-check-label" for="bacon">🥓 Bacon - ₹35</label>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <!-- Quantity Selection -->
+          <div class="col-md-6 mb-3">
+            <label for="quantity" class="form-label">Quantity 🔢</label>
+            <input type="number" class="form-control" id="quantity" min="1" value="1">
+          </div>
+        </div>
+       <button type="submit" class="btn btn-primary">Place Order</button>
+      </form>
+    </div>
+  </section>
+  
+  <section id="order-summary">
+    <div class="Container">
+      <h2 class="text-center">Order Summary 📝</h2>
+      <p id="summary-text" class="text-center mt-4"></p>
+      <div class="text-center">
+        <button id="print-button" class="btn btn-secondary">Print Order Summary 🖨️</button>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+<section id="contact">
+  <div class="container1">
+      <h1 class="h1">Contact Us</h1>
+      <div class="contact-info">
+          <div class="contact-details">
+              <p>If you have any questions, feel free to reach out to us.</p>
+              <ul>
+                  <li><strong>📍 Address:</strong> kunal Plaza, near Chinchwad station, Pune-50460</li>
+                  <li><strong>📞 Phone:</strong> 1230649504</li>
+                  <li><strong>✉️ Email:</strong> info@deliciouscafe.com</li>
+              </ul>
+          </div>
+      </div>
+  <div class="contact-map">
+                <!-- Google Map Embed -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1890.276245252326!2d73.79130678850025!3d18.639187587148967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1schinchwad%20statiobn!5e0!3m2!1sen!2sin!4v1724250864520!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Delicious Cafe. All Rights Reserved.</p>
+</footer>
+
+ 
+  <script>
+    document.getElementById('food-order-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        // Get selected food type and price
+        const foodType = document.getElementById('food-type');
+        const foodPrice = parseFloat(foodType.options[foodType.selectedIndex].getAttribute('data-price'));
+  
+        // Get selected size and price
+        const size = document.getElementById('size');
+        const sizePrice = parseFloat(size.options[size.selectedIndex].getAttribute('data-price'));
+  
+        // Calculate toppings price
+        const toppings = document.querySelectorAll('#toppings input:checked');
+        let toppingsPrice = 0;
+        toppings.forEach(topping => {
+            toppingsPrice += parseFloat(topping.getAttribute('data-price'));
+        });
+  
+        // Get quantity
+        const quantity = parseInt(document.getElementById('quantity').value);
+  
+        // Calculate total price
+        const totalPrice = (foodPrice + sizePrice + toppingsPrice) * quantity;
+  
+        // Show order summary
+        const summaryText = `You have ordered ${quantity} ${foodType.options[foodType.selectedIndex].text} with ${size.options[size.selectedIndex].text} size and ${toppings.length ? Array.from(toppings).map(t => t.nextElementSibling.textContent).join(', ') : 'no toppings'}. Total price: ₹${totalPrice.toFixed(2)}.`;
+        document.getElementById('summary-text').textContent = summaryText;
+        document.getElementById('order-summary').style.display= 'block';
+        document.getElementById('print-button').style.display = 'inline-block';
+        document.getElementById('whatsapp-button').style.display = 'inline-block';
+    });
+    document.getElementById('print-button').addEventListener('click', function() {
+      const originalContent = document.body.innerHTML;
+      const orderSummaryContent = document.getElementById('order-summary').innerHTML;
+
+      // Set the page content to just the order summary
+      document.body.innerHTML = orderSummaryContent;
+
+      // Print the order summary
+      window.print();
+
+      // Restore the original page content after printing
+      document.body.innerHTML = originalContent;
+
+      // Re-bind the print button event listener
+      document.getElementById('print-button').addEventListener('click', arguments.callee);
+  });
+  
+  </script>
+            
+</body>
+</html>
