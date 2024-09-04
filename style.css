@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Custom CSS */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-img {
+    background-image: url('i1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-link {
+    color: white !important;
+}
+#home {
+    height: 100vh;
+}
+
+#menu, #order-summary {
+    background-color: #f8f9fa;
+}
+
+/* Custom CSS for Food Order Form */
+.container {
+    max-width: 800px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+    font-weight: 170;
+    font-style: italic;
+    margin-right: -250px;
+   
+}
+.p1{
+    padding-right: -30px;
+    font-size: 20px;
+
+}
+#menu{
+    background-image: url('b1.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.text-center1{
+    
+    padding-left: 90px;
+}
+.btn-primary {
+    background-color: #ff6f61;
+    border-color: #ff6f61;
+    transition: background-color 0.3s ease;
+    margin-right: -200px;
+}
+
+.btn-primary:hover {
+    background-color: #e55b50;
+    border-color: #e55b50;
+}
+
+#order-summary {
+    padding: 20px;
+    background-color: rgb(173, 173, 117);
+    border-radius: 10px;
+    border: 1px solid #ffeeba;
+
+}
+#summary-text{
+    padding-left: 20px;
+}
+.container1 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 50px;
+    margin-right: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-details ul li {
+    margin-bottom: 10px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+#print-button {
+    margin-top: 20px;
+    display: none;
+}
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+  
+
+
+
